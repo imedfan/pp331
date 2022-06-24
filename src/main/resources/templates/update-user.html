@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <style>
+        table th,
+        table td {
+            padding: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>UserList</title>
+</head>
+
+<body>
+    <h3>input user</h3>
+    <form action="#" th:action="@{/saveUser}" th:object="${userUp}">
+        <table>
+            <tr>
+                <th>Id:</th>
+                <th><input type="text" th:field="*{id}" /></th>
+            </tr>
+            <tr>
+                <th>name:</th>
+                <th><input type="text" th:field="*{name}" /></th>
+            </tr>
+            <tr>
+                <th>age:</th>
+                <th><input type="text" th:field="*{age}" /></th>
+            </tr>
+            <tr>
+                <th>car:</th>
+                <th><input type="text" th:field="*{car}" /></th>
+            </tr>
+            <tr>
+                <th>FS:</th>
+                <th><input type="text" th:field="*{family}" /></th>
+            </tr>
+        </table>
+        <p><input type="submit" value="ОК" /></p>
+    </form>
+
+</body>
+
+</html>
